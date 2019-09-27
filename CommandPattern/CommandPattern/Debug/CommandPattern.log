@@ -1,0 +1,4 @@
+﻿  InputHandler.cpp
+C:\Users\C00214190\Desktop\Work\Games Engineering 2\GamesEngineering2-CommandPattern\CommandPattern\CommandPattern\VKeyValue.h(13,2): warning C4091:  'static ': ignored on left of 'const VKeyValue' when no variable is declared
+C:\Users\C00214190\Desktop\Work\Games Engineering 2\GamesEngineering2-CommandPattern\CommandPattern\CommandPattern\VKeyValue.h(25,2): warning C4091:  'static ': ignored on left of 'CommandId' when no variable is declared
+  CommandPattern.vcxproj -> C:\Users\C00214190\Desktop\Work\Games Engineering 2\GamesEngineering2-CommandPattern\CommandPattern\Debug\CommandPattern.exe

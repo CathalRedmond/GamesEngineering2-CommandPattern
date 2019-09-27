@@ -123,6 +123,26 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Command.cpp" />
+    <ClCompile Include="InputHandler.cpp" />
+    <ClCompile Include="MacroCommand.cpp" />
+    <ClCompile Include="Main.cpp" />
+    <ClCompile Include="RedoCommand.cpp" />
+    <ClCompile Include="UndoCommand.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Command.h" />
+    <ClInclude Include="InputHandler.h" />
+    <ClInclude Include="MacroCommand.h" />
+    <ClInclude Include="PrintECommand.h" />
+    <ClInclude Include="PrintQCommand.h" />
+    <ClInclude Include="PrintRCommand.h" />
+    <ClInclude Include="PrintTCommand.h" />
+    <ClInclude Include="PrintWCommand.h" />
+    <ClInclude Include="PrintYCommand.h" />
+    <ClInclude Include="RedoCommand.h" />
+    <ClInclude Include="UndoCommand.h" />
+    <ClInclude Include="VKeyValue.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
