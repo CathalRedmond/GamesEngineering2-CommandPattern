@@ -1,13 +1,8 @@
 #pragma once
 #include "Command.h"
-#include "PrintQCommand.h"
-#include "PrintWCommand.h"
-#include "PrintECommand.h"
-#include "PrintRCommand.h"
-#include "PrintTCommand.h"
-#include "PrintYCommand.h"
-#include <stack>
-#include "VKeyValue.h"
+#include "MacroCommand.h"
+//#include <stack>
+#include "Structs.h"
 #include <vector>
 #include <Windows.h>
 #include <WinUser.h>
@@ -23,12 +18,10 @@ private:
 	Command* RCommand = new PrintRCommand();
 	Command* TCommand = new PrintTCommand();
 	Command* YCommand = new PrintYCommand();
-	
-	std::stack<Command*> commandsExecuted;
-	std::stack<Command*> commandsUndone;
+	Command* Redo = new RedoCommand();
+	Command* Undo = new	UndoCommand();
+	MacroCommand commands;
 
 	bool keyPressed[8] = { false,false,false,false,false,false,false,false };
-	
-
 };
 

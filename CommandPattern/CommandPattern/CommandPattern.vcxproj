@@ -123,12 +123,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Command.cpp" />
     <ClCompile Include="InputHandler.cpp" />
     <ClCompile Include="MacroCommand.cpp" />
     <ClCompile Include="Main.cpp" />
-    <ClCompile Include="RedoCommand.cpp" />
-    <ClCompile Include="UndoCommand.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Command.h" />
@@ -142,7 +139,7 @@
     <ClInclude Include="PrintYCommand.h" />
     <ClInclude Include="RedoCommand.h" />
     <ClInclude Include="UndoCommand.h" />
-    <ClInclude Include="VKeyValue.h" />
+    <ClInclude Include="Structs.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -3,5 +3,7 @@
 class UndoCommand :
 	public Command
 {
+public:
+	virtual void execute() { std::cout << "\b \b"; }
 };
 

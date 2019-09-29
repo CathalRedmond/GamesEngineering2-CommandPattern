@@ -1,4 +1,10 @@
 ﻿  InputHandler.cpp
-C:\Users\C00214190\Desktop\Work\Games Engineering 2\GamesEngineering2-CommandPattern\CommandPattern\CommandPattern\VKeyValue.h(13,2): warning C4091:  'static ': ignored on left of 'const VKeyValue' when no variable is declared
-C:\Users\C00214190\Desktop\Work\Games Engineering 2\GamesEngineering2-CommandPattern\CommandPattern\CommandPattern\VKeyValue.h(25,2): warning C4091:  'static ': ignored on left of 'CommandId' when no variable is declared
-  CommandPattern.vcxproj -> C:\Users\C00214190\Desktop\Work\Games Engineering 2\GamesEngineering2-CommandPattern\CommandPattern\Debug\CommandPattern.exe
+C:\Users\Cathal\Desktop\GamesEngineering2-CommandPattern\CommandPattern\CommandPattern\Structs.h(13,2): warning C4091:  'static ': ignored on left of 'const VKeyValue' when no variable is declared
+  MacroCommand.cpp
+  Main.cpp
+C:\Users\Cathal\Desktop\GamesEngineering2-CommandPattern\CommandPattern\CommandPattern\Structs.h(25,2): warning C4091:  'static ': ignored on left of 'const CommandId' when no variable is declared
+C:\Users\Cathal\Desktop\GamesEngineering2-CommandPattern\CommandPattern\CommandPattern\Structs.h(13,2): warning C4091:  'static ': ignored on left of 'const VKeyValue' when no variable is declared
+C:\Users\Cathal\Desktop\GamesEngineering2-CommandPattern\CommandPattern\CommandPattern\Structs.h(25,2): warning C4091:  'static ': ignored on left of 'const CommandId' when no variable is declared
+  Generating Code...
+C:\Users\Cathal\Desktop\GamesEngineering2-CommandPattern\CommandPattern\CommandPattern\Main.cpp(4,13): warning C4326:  return type of 'main' should be 'int' instead of 'void'
+  CommandPattern.vcxproj -> C:\Users\Cathal\Desktop\GamesEngineering2-CommandPattern\CommandPattern\Debug\CommandPattern.exe

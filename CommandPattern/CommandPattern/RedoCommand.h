@@ -4,9 +4,6 @@ class RedoCommand :
 	public Command
 {
 public:
-	virtual void execute();
-	virtual void addUndoneCommand(Command*);
-private:
-	std::stack<Command*>
+	virtual void execute() {};
 };
 

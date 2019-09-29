@@ -2,113 +2,84 @@
 
 void InputHandler::handleInput()
 {
-	if (GetAsyncKeyState(VKeyValue::Q) && !keyPressed[(int)CommandId::Q])
+	if (GetAsyncKeyState(VKeyValue::Q) && !keyPressed[CommandId::Q])
 	{
-		QCommand->execute();
-		commandsExecuted.push(QCommand);
-		while (!commandsUndone.empty())
-			commandsUndone.pop();
-		keyPressed[0] = true;
+		commands.addAndExecute(QCommand);
+		keyPressed[CommandId::Q] = true;
 	}
-	else if (!GetAsyncKeyState(VKeyValue::Q) && keyPressed[0])
+	else if (!GetAsyncKeyState(VKeyValue::Q) && keyPressed[CommandId::Q])
 	{
-		keyPressed[0] = false;
+		keyPressed[CommandId::Q] = false;
 	}
 
-	if (GetAsyncKeyState(VKeyValue::W) && !keyPressed[1])
+	if (GetAsyncKeyState(VKeyValue::W) && !keyPressed[CommandId::W])
 	{
-		WCommand->execute();
-		commandsExecuted.push(WCommand);
-		while (!commandsUndone.empty())
-			commandsUndone.pop();
-		keyPressed[1] = true;
+		commands.addAndExecute(WCommand);
+		keyPressed[CommandId::W] = true;
 	}
-	else if (!GetAsyncKeyState(VKeyValue::W) && keyPressed[1])
+	else if (!GetAsyncKeyState(VKeyValue::W) && keyPressed[CommandId::W])
 	{
-		keyPressed[1] = false;
+		keyPressed[CommandId::W] = false;
 	}
 
-	if (GetAsyncKeyState(VKeyValue::E) && !keyPressed[2])
+	if (GetAsyncKeyState(VKeyValue::E) && !keyPressed[CommandId::E])
 	{
-		ECommand->execute();
-		commandsExecuted.push(ECommand);
-		while (!commandsUndone.empty())
-			commandsUndone.pop();
-		keyPressed[2] = true;
+		commands.addAndExecute(ECommand);
+		keyPressed[CommandId::E] = true;
 	}
-	else if (!GetAsyncKeyState(VKeyValue::E) && keyPressed[2])
+	else if (!GetAsyncKeyState(VKeyValue::E) && keyPressed[CommandId::E])
 	{
-		keyPressed[2] = false;
+		keyPressed[CommandId::E] = false;
 	}
 
-	if (GetAsyncKeyState(VKeyValue::R) && !keyPressed[3])
+	if (GetAsyncKeyState(VKeyValue::R) && !keyPressed[CommandId::R])
 	{
-		RCommand->execute();
-		commandsExecuted.push(RCommand);
-		while (!commandsUndone.empty())
-			commandsUndone.pop();
-		keyPressed[3] = true;
+		commands.addAndExecute(RCommand);
+		keyPressed[CommandId::R] = true;
 	}
-	else if (!GetAsyncKeyState(VKeyValue::R) && keyPressed[3])
+	else if (!GetAsyncKeyState(VKeyValue::R) && keyPressed[CommandId::R])
 	{
-		keyPressed[3] = false;
+		keyPressed[CommandId::R] = false;
 	}
 
-	if (GetAsyncKeyState(VKeyValue::T) && !keyPressed[4])
+	if (GetAsyncKeyState(VKeyValue::T) && !keyPressed[CommandId::T])
 	{
-		TCommand->execute();
-		commandsExecuted.push(TCommand);
-		while (!commandsUndone.empty())
-			commandsUndone.pop();
-		keyPressed[4] = true;
+		commands.addAndExecute(TCommand);
+		keyPressed[CommandId::T] = true;
 	}
-	else if (!GetAsyncKeyState(VKeyValue::T) && keyPressed[4])
+	else if (!GetAsyncKeyState(VKeyValue::T) && keyPressed[CommandId::T])
 	{
-		keyPressed[4] = false;
+		keyPressed[CommandId::T] = false;
 	}
 
-	if (GetAsyncKeyState(VKeyValue::Y) && !keyPressed[5])
+	if (GetAsyncKeyState(VKeyValue::Y) && !keyPressed[CommandId::Y])
 	{
-		YCommand->execute();
-		commandsExecuted.push(YCommand);
-		while (!commandsUndone.empty())
-			commandsUndone.pop();
-		keyPressed[5] = true;
-
+		commands.addAndExecute(YCommand);
+		keyPressed[CommandId::Y] = true;
 	}
-	else if (!GetAsyncKeyState(VKeyValue::Y) && keyPressed[5])
+	else if (!GetAsyncKeyState(VKeyValue::Y) && keyPressed[CommandId::Y])
 	{
-		keyPressed[5] = false;
+		keyPressed[CommandId::Y] = false;
 	}
 
-	if (GetAsyncKeyState(VKeyValue::BACKSPACE) && !keyPressed[6])
+	if (GetAsyncKeyState(VKeyValue::BACKSPACE) && !keyPressed[CommandId::BACKSPACE])
 	{
-		if (!commandsExecuted.empty())
-		{
-			commandsExecuted.top()->undo();
-			commandsUndone.push(commandsExecuted.top());
-			commandsExecuted.pop();
-			keyPressed[6] = true;
-		}
+		commands.addAndExecute(Undo);
+		keyPressed[CommandId::BACKSPACE] = true;
 	}
-	else if (!GetAsyncKeyState(VKeyValue::BACKSPACE) && keyPressed[6])
+	else if (!GetAsyncKeyState(VKeyValue::BACKSPACE) && keyPressed[CommandId::BACKSPACE])
 	{
-		keyPressed[6] = false;
+		keyPressed[CommandId::BACKSPACE] = false;
 	}
 
-	if (GetAsyncKeyState(VKeyValue::TAB) && !keyPressed[7])
+	if (GetAsyncKeyState(VKeyValue::TAB) && !keyPressed[CommandId::TAB])
 	{
-		if (!commandsUndone.empty())
-		{
-			commandsUndone.top()->execute();
-			commandsExecuted.push(commandsUndone.top());
-			commandsUndone.pop();
-			keyPressed[7] = true;
-		}
+		commands.addAndExecute(Redo);
+		keyPressed[CommandId::TAB] = true;
 	}
-	else if (!GetAsyncKeyState(VKeyValue::TAB) && keyPressed[7])
+	else if (!GetAsyncKeyState(VKeyValue::TAB) && keyPressed[CommandId::TAB])
 	{
-		keyPressed[7] = false;
+		keyPressed[CommandId::TAB] = false;
 	}
 }
 
